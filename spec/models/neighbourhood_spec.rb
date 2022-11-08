@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe Neighborhood do
+describe Neighbourhood do
   let(:nyc) { City.create(name: 'NYC') }
-  let(:brighton_beach) { Neighborhood.create(name: 'Brighton Beach', city: nyc) }
+  let(:brighton_beach) { Neighbourhood.create(name: 'Brighton Beach', city: nyc) }
 
   it 'has a name' do
     expect(brighton_beach.name).to eq('Brighton Beach')
@@ -21,7 +21,7 @@ describe Neighborhood do
         title: "Beautiful Home on Mountain",
         description: "Whole house for rent on mountain. Many bedrooms.",
         price: 200.00,
-        neighborhood: brighton_beach,
+        neighbourhood: brighton_beach,
         host: user
       )
     end

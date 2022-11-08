@@ -9,7 +9,7 @@ describe User do
 
   context "guest and host" do
     let(:nyc) { City.create(name: 'NYC') }
-    let(:green_point) { Neighborhood.create(name: 'Green Point', city: nyc) }
+    let(:green_point) { Neighbourhood.create(name: 'Green Point', city: nyc) }
     let(:listing) do
       Listing.create(
         address: '6 Maple Street',
@@ -17,7 +17,7 @@ describe User do
         title: "Shared room in apartment",
         description: "share a room with me because I'm poor",
         price: 15.00,
-        neighborhood: green_point,
+        neighbourhood: green_point,
         host: katie
       )
     end

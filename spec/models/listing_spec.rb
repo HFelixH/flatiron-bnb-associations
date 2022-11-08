@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Listing do
   let(:new_york_city) { City.create(name: 'NYC') }
-  let(:financial_district) { Neighborhood.create(name: 'Fi Di', city: new_york_city) }
+  let(:financial_district) { Neighbourhood.create(name: 'Fi Di', city: new_york_city) }
   let(:amanda) { User.create(name: "Amanda") }
   let(:logan) { User.create(name: "Logan") }
   let!(:listing) do
@@ -12,7 +12,7 @@ describe Listing do
       title: "Beautiful Apartment on Main Street",
       description: "My apartment is great. there's a bedroom. close to subway....blah blah",
       price: 50.00,
-      neighborhood: financial_district,
+      neighbourhood: financial_district,
       host: amanda
     )
   end
@@ -37,8 +37,8 @@ describe Listing do
     expect(listing.price).to eq(50.00)
   end
 
-  it 'belongs to a neighborhood' do
-    expect(listing.neighborhood.name).to eq("Fi Di")
+  it 'belongs to a neighbourhood' do
+    expect(listing.neighbourhood.name).to eq("Fi Di")
   end
 
   it 'belongs to a host' do
